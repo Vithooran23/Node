@@ -47,8 +47,11 @@ app.listen(3001, () => {
 The second argument is a callback function that is executed when the server has successfully started listening on the specified port. In this case, the callback function logs a message to the console indicating that the server has started*/
 
 const routes = require('./routes/EmployeeRoutes');
-app.use('/api', routes) /* const routes = require('./routes/EmployeeRoutes'): This line of code imports the routes defined in the EmployeeRoutes file located in the routes directory. These routes will handle incoming requests for the /api endpoint.
+ /* This line of code imports the routes defined in the EmployeeRoutes file located in the routes directory. These routes will handle incoming requests for the /api endpoint.
 app.use('/api', routes): This line of code tells the Express server to use the imported routes middleware for all routes that start with /api.
- */
+ require()=== function to import the router object from the ./router module.
+*/
+
+app.use('/api', routes)/*  */
 
 
