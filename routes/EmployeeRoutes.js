@@ -5,7 +5,7 @@ const router = express.Router()
 module.exports = router;
 
 
-// const Model = require('../models/model');
+const Model = require('../models/EmployeeModel');
 
 // We have five methods that use the REST Methods 
 // of Post, Get, Patch, and Delete.
@@ -38,8 +38,10 @@ router.delete('/delete/:id', (req, res) => {
 // How to Post Data to the Database
 router.post('/post', async (req, res) => {
     const data = new Model({
-        name: req.body.name,
-        age: req.body.age
+        employeename: req.body.employeename,
+        department: req.body.department,
+        destination:req.body.destination,
+        salary:req.body.salary
     })
 
     try {
